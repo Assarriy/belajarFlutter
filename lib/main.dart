@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
-
 // Contoh StatefulWidget sederhana
 class CounterApp extends StatefulWidget {
   const CounterApp({super.key});
