@@ -21,10 +21,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomePage(),
         'bab3': (context) => const ProfileCard(),
         // sementara bab4 diarahkan ke Scaffold kosong
-        'bab4': (context) => Scaffold(
-              appBar: AppBar(title: const Text("Bab 4")),
-              body: const Center(child: Text("Halaman Bab 4 belum dibuat")),
-            ),
+        'bab4': (context) => const CalculatorApp(),
       },
     );
   }
