@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pages/bab3/profile_card.dart';
 // Import file lainnya
 
 void main() {
@@ -12,9 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'bab4',
+      initialRoute: 'bab3',
       routes: {
-        // 'bab4': (context) => Button(),
+        'bab3': (context) => const ProfileCard(),
       },
     );
   }
