@@ -1,3 +1,4 @@
+import 'package:belajar_flutter/pages/bab4/kalkulator.dart';
 import 'package:flutter/material.dart';
 import 'pages/bab3/profile_card.dart';
 // Import file lainnya
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'bab3',
       routes: {
         'bab3': (context) => const ProfileCard(),
+        'bab4': (context) => const CalculatorApp(),
       },
     );
   }
