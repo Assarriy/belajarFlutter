@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 // Import file lainnya
-import 'pages/bab3/stateful.dart';
-import 'pages/bab4/materi.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: 'bab4',
       routes: {
-        'bab3': (context) => Stateful(),
-        'bab4': (context) => Button(),
+        // 'bab4': (context) => Button(),
       },
     );
   }
