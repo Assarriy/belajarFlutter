@@ -1,24 +1,12 @@
-// Kalkulator - Wibowo Assariy
+// Kalkulator - Wibowo Assariy (Tanpa Tombol Kembali ke Home)
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const CalculatorApp());
-}
 
 class CalculatorApp extends StatelessWidget {
   const CalculatorApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Kalkulator App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: const Calculator(),
-    );
+    return const Calculator();
   }
 }
 
@@ -74,7 +62,6 @@ class _CalculatorState extends State<Calculator> {
 
     setState(() {
       _hasil = tempResult.toStringAsFixed(2);
-
       if (_hasil.endsWith('.00')) {
         _hasil = _hasil.substring(0, _hasil.length - 3);
       }
@@ -82,10 +69,11 @@ class _CalculatorState extends State<Calculator> {
   }
 
   @override
-  Widget build(BuildContext contex) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Kalkulator'),
+        backgroundColor: Colors.blue,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -101,8 +89,7 @@ class _CalculatorState extends State<Calculator> {
               ),
               child: Text(
                 _hasil,
-                style:
-                    const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
               ),
             ),
             const SizedBox(height: 20),
@@ -112,7 +99,7 @@ class _CalculatorState extends State<Calculator> {
                 labelText: 'Angka pertama',
                 border: OutlineInputBorder(),
               ),
-              keyboardType: TextInputType.numberWithOptions(decimal: true),
+              keyboardType: const TextInputType.numberWithOptions(decimal: true),
             ),
             const SizedBox(height: 15),
             TextField(
@@ -121,7 +108,7 @@ class _CalculatorState extends State<Calculator> {
                 labelText: 'Angka Kedua',
                 border: OutlineInputBorder(),
               ),
-              keyboardType: TextInputType.numberWithOptions(decimal: true),
+              keyboardType: const TextInputType.numberWithOptions(decimal: true),
             ),
             const SizedBox(height: 20),
             Row(
@@ -132,7 +119,7 @@ class _CalculatorState extends State<Calculator> {
                 _tombolOperasi('x'),
                 _tombolOperasi('/'),
               ],
-            )
+            ),
           ],
         ),
       ),
@@ -142,11 +129,11 @@ class _CalculatorState extends State<Calculator> {
   Widget _tombolOperasi(String operation) {
     return ElevatedButton(
       onPressed: () => _hitung(operation),
-      child: Text(operation),
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.all(20),
         textStyle: const TextStyle(fontSize: 24),
       ),
+      child: Text(operation),
     );
   }
 
