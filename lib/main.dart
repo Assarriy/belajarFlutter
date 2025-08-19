@@ -22,7 +22,7 @@ import 'package:flutter/material.dart';
           'bab3': (context) => const ProfileCard(),
           'bab4': (context) => const CalculatorApp(),
           'bab5': (context) => const ProductCatalogApp(),
-          'bab6': (context) => const Bab6Page(),
+          'bab6': (context) => const MyGalleryApp(),
         },
       );
     }
