@@ -1,4 +1,4 @@
-// Katalog Produk - Wibowo Assariy (Bab 5)
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -112,3 +112,5 @@ class ProductDetailScreen extends StatelessWidget {
     );
   }
 }
+
+// alip
